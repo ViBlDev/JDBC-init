@@ -1,0 +1,24 @@
+package DAO.services;
+
+import java.sql.*;
+
+import DAO.Constantes;
+
+public class DatabaseConnection {
+    private static Connection connection;
+    final private static String URL=Constantes.URL;
+    final private static String USERNAME=Constantes.USERNAME;
+    final private static String PASSWORD=Constantes.PASSWORD;
+
+    private DatabaseConnection(){}
+
+        public static Connection getInstance() throws SQLException {
+            if(connection==null){
+                connection= DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            }
+            return connection;
+        }
+
+}
+
+
