@@ -105,4 +105,20 @@ public class Client extends BaseModel{
     public void setState(int state) {
         this.state = state;
     }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "companyName='" + companyName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                ", state=" + state +
+                '}';
+    }
 }
